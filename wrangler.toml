@@ -1,0 +1,10 @@
+name = "lawmemory"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "."
+
+# Cloudflare D1 Database Binding
+# DB will be accessible inside functions as `env.DB`
+[[d1_databases]]
+binding = "DB"
+database_name = "lawmemory-db"
+database_id = "lawmemory-d1-id" # จะถูกแทนที่ด้วย Database ID จริงหลังจากสร้างใน Cloudflare

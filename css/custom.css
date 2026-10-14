@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --font-prompt: 'Prompt', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sarabun: 'Sarabun', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  font-family: var(--font-prompt);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-sarabun {
+  font-family: var(--font-sarabun);
+}
+
+/* Smooth Thai text wrapping in typing arena */
+#arena-display {
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-break: loose;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Caret blinking animation for typing game */
+@keyframes cursor-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-cursor {
+  animation: cursor-pulse 0.9s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Error shake animation */
+@keyframes shake-sm {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-3px); }
+  40%, 80% { transform: translateX(3px); }
+}
+
+.animate-shake {
+  animation: shake-sm 0.25s ease-in-out;
+}
+
+/* Level selection pills - Always high-contrast and readable */
+.btn-level-pill {
+  transition: all 0.15s ease-in-out;
+  border-width: 1.5px;
+  cursor: pointer;
+}
+
+.btn-level-pill.lvl-inactive {
+  background-color: #f8fafc;
+  border-color: #e2e8f0;
+  color: #334155;
+}
+
+.dark .btn-level-pill.lvl-inactive {
+  background-color: rgba(15, 23, 42, 0.65);
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+.btn-level-pill.lvl-inactive:hover {
+  background-color: #eef2ff !important;
+  border-color: #818cf8 !important;
+  color: #4338ca !important;
+}
+
+.dark .btn-level-pill.lvl-inactive:hover {
+  background-color: #1e1b4b !important;
+  border-color: #6366f1 !important;
+  color: #e0e7ff !important;
+}
+
+.btn-level-pill.lvl-active {
+  background-color: #4f46e5 !important;
+  border-color: #4338ca !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+}
+
+.btn-level-pill.lvl-active:hover {
+  background-color: #4338ca !important;
+  border-color: #3730a3 !important;
+  color: #ffffff !important;
+}
+
+.btn-level-pill.lvl-active span {
+  color: #ffffff !important;
+}
+
+/* Peek Hint Highlight in Dark Yellow */
+.peek-hint-active {
+  display: inline !important;
+  color: #92400e !important; /* amber-800 dark yellow */
+  background-color: #fef3c7 !important; /* amber-100 */
+  border-bottom: 2px solid #d97706 !important; /* amber-600 */
+  border-radius: 4px;
+  padding: 1px 4px !important;
+  font-weight: 700 !important;
+  line-height: inherit !important;
+}
+
+.dark .peek-hint-active {
+  display: inline !important;
+  color: #fde68a !important; /* amber-200 */
+  background-color: rgba(120, 53, 15, 0.8) !important;
+  border-bottom: 2px solid #b45309 !important;
+  border-radius: 4px;
+  padding: 1px 4px !important;
+  font-weight: 700 !important;
+  line-height: inherit !important;
+}

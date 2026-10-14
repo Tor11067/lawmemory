@@ -1,0 +1,27 @@
+{
+  "name": "lawmemory",
+  "version": "1.0.0",
+  "description": "แอพท่องจำประมวลกฎหมายอาญาและแพ่งฯ พร้อมเกมพิมพ์ท่องจำและฐานข้อมูล Cloudflare D1",
+  "main": "js/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "./run.sh",
+    "pages:dev": "wrangler pages dev .",
+    "pages:deploy": "wrangler pages deploy . --project-name lawmemory",
+    "d1:create": "wrangler d1 create lawmemory-db",
+    "d1:init-local": "wrangler d1 execute lawmemory-db --local --file=./schema.sql",
+    "d1:init-remote": "wrangler d1 execute lawmemory-db --remote --file=./schema.sql"
+  },
+  "keywords": [
+    "thai-law",
+    "memorization",
+    "spaced-repetition",
+    "cloudflare-pages",
+    "cloudflare-d1"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  }
+}

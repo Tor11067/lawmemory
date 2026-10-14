@@ -1,0 +1,17 @@
+{
+  "name": "LawMemory - ท่องจำประมวลกฎหมาย",
+  "short_name": "LawMemory",
+  "description": "แอพท่องจำประมวลกฎหมายอาญา และประมวลกฎหมายแพ่งและพาณิชย์",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
