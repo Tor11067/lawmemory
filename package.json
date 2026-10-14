@@ -5,7 +5,8 @@
   "main": "js/app.js",
   "type": "module",
   "scripts": {
-    "build": "echo 'Static build ready'"
+    "build": "echo 'Static build ready'",
+    "deploy": "wrangler pages deploy ."
   },
   "keywords": [
     "thai-law",
@@ -15,5 +16,8 @@
     "cloudflare-d1"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.114.0"
+  }
 }
