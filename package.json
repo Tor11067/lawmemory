@@ -2,17 +2,17 @@
   "name": "lawmemory",
   "version": "1.0.0",
   "description": "แอพท่องจำประมวลกฎหมายอาญาและแพ่งฯ พร้อมเกมพิมพ์ท่องจำและฐานข้อมูล Cloudflare D1",
-  "main": "js/app.js",
+  "main": "worker.js",
   "type": "module",
   "scripts": {
-    "build": "echo 'Static build ready'",
-    "deploy": "wrangler pages deploy ."
+    "build": "echo 'Build ready'",
+    "deploy": "wrangler deploy"
   },
   "keywords": [
     "thai-law",
     "memorization",
     "spaced-repetition",
-    "cloudflare-pages",
+    "cloudflare-workers",
     "cloudflare-d1"
   ],
   "author": "",
